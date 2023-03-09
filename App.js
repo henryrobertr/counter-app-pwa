@@ -3,8 +3,13 @@
 const e = React.createElement;
 
 const Button = () => {
+  const [count, setCount] = React.useState(0)
   return (
-    <button>Hello</button>
+    <div className="wrapper">
+      <div className="display">{count}</div>
+      <button onClick={() => setCount(0)} className="buttonClear">x</button>
+      <button onClick={() => setCount((prev) => prev+1)} className="buttonPlus">+</button>
+    </div>
   )
 }
 
