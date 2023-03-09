@@ -1,7 +1,8 @@
 {
   "name": "Counter Plus Plus",
   "short_name": "Counter",
-  "start_url": "index.html",
+  "id": "/?homescreen=1",
+  "start_url": "index.html?homescreen=1",
   "display": "standalone",
   "background_color": "#5900b3",
   "theme_color": "black",
