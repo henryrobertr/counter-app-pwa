@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,
+                 initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Title -->
+  <title>Counter</title>
+
+  <!-- Meta Tags required for
+       Progressive Web App -->
+  <meta name="apple-mobile-web-app-status-bar" content="#aa7700">
+  <meta name="theme-color" content="black">
+
+  <!-- Manifest File link -->
+  <link rel="manifest" href="manifest.json">
+
+
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <script data-type="module" src="./App.js" type="text/babel"></script>
+
+  <script>
+    window.addEventListener('load', () => {
+      registerSW();
+    });
+ 
+    // Register the Service Worker
+    async function registerSW() {
+      if ('serviceWorker' in navigator) {
+        try {
+          await navigator
+                .serviceWorker
+                .register('serviceworker.js');
+        }
+        catch (e) {
+          console.log('SW registration failed');
+        }
+      }
+    }
+ </script>
+</body>
+
+</html>
