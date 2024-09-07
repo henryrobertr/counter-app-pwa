@@ -1,6 +1,6 @@
 /* https://github.com/MicrosoftEdge/Demos/blob/main/pwamp/sw.js */
 
-const VERSION = "v333";
+const VERSION = "v3333";
 const CACHE_NAME = `counterapp-${VERSION}`;
  
 // Those are all the resources our app needs to work.
